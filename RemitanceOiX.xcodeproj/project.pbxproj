@@ -20,6 +20,7 @@
 		52C559231CE4A33000FCAA1A /* RemitanceOiX-450x450.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C559221CE4A33000FCAA1A /* RemitanceOiX-450x450.png */; };
 		52C559271CE5D7F800FCAA1A /* FormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C559251CE5D7F800FCAA1A /* FormController.m */; };
 		52C559281CE5D7F800FCAA1A /* FormController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C559261CE5D7F800FCAA1A /* FormController.xib */; };
+		52C5592A1CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C559291CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		52C559241CE5D7F800FCAA1A /* FormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FormController.h; path = ../FormController.h; sourceTree = "<group>"; };
 		52C559251CE5D7F800FCAA1A /* FormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FormController.m; path = ../FormController.m; sourceTree = "<group>"; };
 		52C559261CE5D7F800FCAA1A /* FormController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FormController.xib; path = ../FormController.xib; sourceTree = "<group>"; };
+		52C559291CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RemitanceOiX-thankyou-300x300.png"; path = "../../../ait/iOS/Assessment2/Images/RemitanceOiX-thankyou-300x300.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		52C559211CE496B700FCAA1A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				52C559291CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png */,
 				52C559221CE4A33000FCAA1A /* RemitanceOiX-450x450.png */,
 				52C5591F1CE496A200FCAA1A /* RemitanceOiX.png */,
 			);
@@ -272,6 +275,7 @@
 				52C558FC1CE4924900FCAA1A /* LaunchScreen.storyboard in Resources */,
 				52C558F91CE4924900FCAA1A /* Assets.xcassets in Resources */,
 				52C558F41CE4924900FCAA1A /* Main.storyboard in Resources */,
+				52C5592A1CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png in Resources */,
 				52C559231CE4A33000FCAA1A /* RemitanceOiX-450x450.png in Resources */,
 				52C559201CE496A200FCAA1A /* RemitanceOiX.png in Resources */,
 				52C559281CE5D7F800FCAA1A /* FormController.xib in Resources */,
