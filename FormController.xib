@@ -39,7 +39,7 @@
             <rect key="frame" x="0.0" y="0.0" width="404" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t80-fy-lAL" id="UAz-vc-PZU">
-                <rect key="frame" x="0.0" y="0.0" width="404" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="404" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DzG-OX-jdC">
@@ -61,7 +61,7 @@
             <rect key="frame" x="0.0" y="0.0" width="403" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qt1-AV-cRm" id="mho-hr-0NG">
-                <rect key="frame" x="0.0" y="0.0" width="403" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="403" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-gT-BcW">
@@ -83,7 +83,7 @@
             <rect key="frame" x="0.0" y="0.0" width="406" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hz3-kr-9xw" id="0sK-ie-web">
-                <rect key="frame" x="0.0" y="0.0" width="406" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="406" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G07-eS-6et">
@@ -105,7 +105,7 @@
             <rect key="frame" x="0.0" y="0.0" width="405" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XLi-V7-mPl" id="7wy-Lq-HUz">
-                <rect key="frame" x="0.0" y="0.0" width="405" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="405" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8G-Fc-Var">
