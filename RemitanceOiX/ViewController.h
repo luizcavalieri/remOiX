@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AuthViewController.h"
+
+@import Firebase;
+
 
 @interface ViewController : UIViewController
+
+
 
 
 @end

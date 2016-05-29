@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F40D1DC5324F57A1E9A58CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86349016D14A41CFE79565C0 /* libPods.a */; };
+		523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B34891CF4277C0072DB8D /* DestinyViewController.m */; };
+		52A721431CF05A1300D503A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A721421CF05A1300D503A5 /* GoogleService-Info.plist */; };
+		52A721481CF125EF00D503A5 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A721471CF125EF00D503A5 /* AuthViewController.m */; };
+		52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A7214A1CF129A900D503A5 /* MeasurementHelper.m */; };
+		52A7214E1CF12A9900D503A5 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A7214D1CF12A9900D503A5 /* AppState.m */; };
+		52A721511CF12AF600D503A5 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A721501CF12AF600D503A5 /* AppConstant.m */; };
+		52A721571CF2D0D900D503A5 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A721561CF2D0D900D503A5 /* ExchangeViewController.m */; };
+		52A7215A1CF32FDC00D503A5 /* Exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A721591CF32FDC00D503A5 /* Exchange.m */; };
 		52C558EB1CE4924900FCAA1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C558EA1CE4924900FCAA1A /* main.m */; };
 		52C558EE1CE4924900FCAA1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C558ED1CE4924900FCAA1A /* AppDelegate.m */; };
 		52C558F11CE4924900FCAA1A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C558F01CE4924900FCAA1A /* ViewController.m */; };
@@ -21,6 +30,8 @@
 		52C559271CE5D7F800FCAA1A /* FormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C559251CE5D7F800FCAA1A /* FormController.m */; };
 		52C559281CE5D7F800FCAA1A /* FormController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C559261CE5D7F800FCAA1A /* FormController.xib */; };
 		52C5592A1CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C559291CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png */; };
+		52D0FD0F1CF8501700DECDAA /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D0FD0E1CF8501700DECDAA /* Client.m */; };
+		FACB773BA07B68B3CD3E748F /* libPods-RemitanceOiX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE776DE08222E883838A931 /* libPods-RemitanceOiX.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +52,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		523B34881CF4277C0072DB8D /* DestinyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinyViewController.h; sourceTree = "<group>"; };
+		523B34891CF4277C0072DB8D /* DestinyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinyViewController.m; sourceTree = "<group>"; };
+		52A721421CF05A1300D503A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52A721461CF125EF00D503A5 /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		52A721471CF125EF00D503A5 /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		52A721491CF129A900D503A5 /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementHelper.h; sourceTree = "<group>"; };
+		52A7214A1CF129A900D503A5 /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementHelper.m; sourceTree = "<group>"; };
+		52A7214C1CF12A9900D503A5 /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		52A7214D1CF12A9900D503A5 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
+		52A7214F1CF12AF600D503A5 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
+		52A721501CF12AF600D503A5 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
+		52A721551CF2D0D900D503A5 /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		52A721561CF2D0D900D503A5 /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		52A721581CF32FDC00D503A5 /* Exchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exchange.h; sourceTree = "<group>"; };
+		52A721591CF32FDC00D503A5 /* Exchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exchange.m; sourceTree = "<group>"; };
 		52C558E61CE4924900FCAA1A /* RemitanceOiX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemitanceOiX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C558EA1CE4924900FCAA1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52C558EC1CE4924900FCAA1A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +90,12 @@
 		52C559251CE5D7F800FCAA1A /* FormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FormController.m; path = ../FormController.m; sourceTree = "<group>"; };
 		52C559261CE5D7F800FCAA1A /* FormController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FormController.xib; path = ../FormController.xib; sourceTree = "<group>"; };
 		52C559291CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RemitanceOiX-thankyou-300x300.png"; path = "../../../ait/iOS/Assessment2/Images/RemitanceOiX-thankyou-300x300.png"; sourceTree = "<group>"; };
+		52D0FD0D1CF8501700DECDAA /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		52D0FD0E1CF8501700DECDAA /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		5CE776DE08222E883838A931 /* libPods-RemitanceOiX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RemitanceOiX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86349016D14A41CFE79565C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98275D31E350E3556E1C25F8 /* Pods-RemitanceOiX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemitanceOiX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemitanceOiX/Pods-RemitanceOiX.debug.xcconfig"; sourceTree = "<group>"; };
+		AB98CBA9EC547CEF05262BE1 /* Pods-RemitanceOiX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemitanceOiX.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemitanceOiX/Pods-RemitanceOiX.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACB773BA07B68B3CD3E748F /* libPods-RemitanceOiX.a in Frameworks */,
+				4F40D1DC5324F57A1E9A58CF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +125,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6285AE0A7501B14F7563F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CE776DE08222E883838A931 /* libPods-RemitanceOiX.a */,
+				86349016D14A41CFE79565C0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3ED002668339249640A576BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98275D31E350E3556E1C25F8 /* Pods-RemitanceOiX.debug.xcconfig */,
+				AB98CBA9EC547CEF05262BE1 /* Pods-RemitanceOiX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52A7215B1CF3304B00D503A5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52A721461CF125EF00D503A5 /* AuthViewController.h */,
+				52A721471CF125EF00D503A5 /* AuthViewController.m */,
+				52A721551CF2D0D900D503A5 /* ExchangeViewController.h */,
+				52A721561CF2D0D900D503A5 /* ExchangeViewController.m */,
+				52C558EF1CE4924900FCAA1A /* ViewController.h */,
+				52C558F01CE4924900FCAA1A /* ViewController.m */,
+				523B34881CF4277C0072DB8D /* DestinyViewController.h */,
+				523B34891CF4277C0072DB8D /* DestinyViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		52A7215C1CF3307900D503A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52A7214C1CF12A9900D503A5 /* AppState.h */,
+				52A7214D1CF12A9900D503A5 /* AppState.m */,
+				52A721491CF129A900D503A5 /* MeasurementHelper.h */,
+				52A7214A1CF129A900D503A5 /* MeasurementHelper.m */,
+				52A7214F1CF12AF600D503A5 /* AppConstant.h */,
+				52A721501CF12AF600D503A5 /* AppConstant.m */,
+				52A721581CF32FDC00D503A5 /* Exchange.h */,
+				52A721591CF32FDC00D503A5 /* Exchange.m */,
+				52D0FD0D1CF8501700DECDAA /* Client.h */,
+				52D0FD0E1CF8501700DECDAA /* Client.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		52C558DD1CE4924900FCAA1A = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +182,8 @@
 				52C559051CE4924900FCAA1A /* RemitanceOiXTests */,
 				52C559101CE4924900FCAA1A /* RemitanceOiXUITests */,
 				52C558E71CE4924900FCAA1A /* Products */,
+				3ED002668339249640A576BA /* Pods */,
+				3D6285AE0A7501B14F7563F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,14 +200,15 @@
 		52C558E81CE4924900FCAA1A /* RemitanceOiX */ = {
 			isa = PBXGroup;
 			children = (
+				52A7215C1CF3307900D503A5 /* Classes */,
+				52A7215B1CF3304B00D503A5 /* ViewController */,
+				52A721421CF05A1300D503A5 /* GoogleService-Info.plist */,
 				52C559241CE5D7F800FCAA1A /* FormController.h */,
 				52C559251CE5D7F800FCAA1A /* FormController.m */,
 				52C559261CE5D7F800FCAA1A /* FormController.xib */,
 				52C559211CE496B700FCAA1A /* images */,
 				52C558EC1CE4924900FCAA1A /* AppDelegate.h */,
 				52C558ED1CE4924900FCAA1A /* AppDelegate.m */,
-				52C558EF1CE4924900FCAA1A /* ViewController.h */,
-				52C558F01CE4924900FCAA1A /* ViewController.m */,
 				52C558F21CE4924900FCAA1A /* Main.storyboard */,
 				52C558F81CE4924900FCAA1A /* Assets.xcassets */,
 				52C558FA1CE4924900FCAA1A /* LaunchScreen.storyboard */,
@@ -175,9 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52C559161CE4924900FCAA1A /* Build configuration list for PBXNativeTarget "RemitanceOiX" */;
 			buildPhases = (
+				095B63B6B02FBB345E329630 /* Check Pods Manifest.lock */,
 				52C558E21CE4924900FCAA1A /* Sources */,
 				52C558E31CE4924900FCAA1A /* Frameworks */,
 				52C558E41CE4924900FCAA1A /* Resources */,
+				23D7BBA728FA2B0A61BF9C63 /* Embed Pods Frameworks */,
+				DB093616BBF9758A90A4792C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C558FC1CE4924900FCAA1A /* LaunchScreen.storyboard in Resources */,
+				52A721431CF05A1300D503A5 /* GoogleService-Info.plist in Resources */,
 				52C558F91CE4924900FCAA1A /* Assets.xcassets in Resources */,
 				52C558F41CE4924900FCAA1A /* Main.storyboard in Resources */,
 				52C5592A1CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png in Resources */,
@@ -298,16 +389,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		095B63B6B02FBB345E329630 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23D7BBA728FA2B0A61BF9C63 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB093616BBF9758A90A4792C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52C558E21CE4924900FCAA1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A7215A1CF32FDC00D503A5 /* Exchange.m in Sources */,
 				52C558F11CE4924900FCAA1A /* ViewController.m in Sources */,
 				52C558F71CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld in Sources */,
+				52D0FD0F1CF8501700DECDAA /* Client.m in Sources */,
+				52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */,
 				52C558EE1CE4924900FCAA1A /* AppDelegate.m in Sources */,
+				523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */,
 				52C558EB1CE4924900FCAA1A /* main.m in Sources */,
+				52A721511CF12AF600D503A5 /* AppConstant.m in Sources */,
+				52A721481CF125EF00D503A5 /* AuthViewController.m in Sources */,
 				52C559271CE5D7F800FCAA1A /* FormController.m in Sources */,
+				52A7214E1CF12A9900D503A5 /* AppState.m in Sources */,
+				52A721571CF2D0D900D503A5 /* ExchangeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +595,7 @@
 		};
 		52C559171CE4924900FCAA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98275D31E350E3556E1C25F8 /* Pods-RemitanceOiX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -460,6 +608,7 @@
 		};
 		52C559181CE4924900FCAA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB98CBA9EC547CEF05262BE1 /* Pods-RemitanceOiX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 
+@import Firebase;
+@import FirebaseDatabase;
+@import FirebaseAuth;
+@import GoogleSignIn;
+
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [FIRApp configure];
+    
+    
     return YES;
 }
 
@@ -53,6 +63,17 @@
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "au.com.interactivehippo.RemitanceOiX" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+-(BOOL)application:(UIApplication *)app
+           openURL:(nonnull NSURL *)url
+           options:(nonnull NSDictionary<NSString *,id> *)options{
+    return [[GIDSignIn sharedInstance]
+            handleURL:url
+            sourceApplication:
+            options[UIApplicationOpenURLOptionsSourceApplicationKey]
+            annotation:
+            options[UIApplicationOpenURLOptionsAnnotationKey]];
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
