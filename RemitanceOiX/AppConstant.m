@@ -15,7 +15,7 @@ NSString *const NotificationKeysSignedIn = @"onSignInCompleted";
 NSString *const SeguesSignInToExchange = @"SeguesSignInToExchange";
 NSString *const SeguesExchangeToSignIn = @"SeguesExchangeToSignIn";
 NSString *const SeguesExchangeToDestiny = @"SeguesExchangeToDestiny";
-
+NSString *const SeguesDestinyToSignIn = @"SeguesDestinyToSignIn";
 
 NSString *const MessageFieldsname = @"name";
 NSString *const MessageFieldstext = @"text";

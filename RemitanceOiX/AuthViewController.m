@@ -84,6 +84,14 @@
     
     [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if(error){
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Try Again" message:@"Sorry Login not Completed."
+                preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+            
             NSLog(@"%@", error.localizedDescription);
             return ;
         }
@@ -137,6 +145,14 @@
                                password:password
                              completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
                                  if (error) {
+                                     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Please try again" message:@"Please check if you inserted the correct email address or if have already signup with this email."
+                                                                                             preferredStyle:UIAlertControllerStyleAlert];
+                                     
+                                     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+                                     
+                                     [alert addAction:defaultAction];
+                                     [self presentViewController:alert animated:YES completion:nil];
+                                     
                                      NSLog(@"%@", error.localizedDescription);
                                      return;
                                  }

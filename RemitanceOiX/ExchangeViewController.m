@@ -10,6 +10,7 @@
 #import "Exchange.h"
 #import "AppState.h"
 #import "AppConstant.h"
+#import "DestinyViewController.h"
 
 @import FirebaseAuth;
 @import FirebaseDatabase;
@@ -56,23 +57,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if([[segue identifier] isEqualToString:SeguesExchangeToDestiny]){
+    
+    DestinyViewController *destinyViewController = (DestinyViewController *)[segue destinationViewController];
+    
+    [destinyViewController setMoneyToReceiveFromXvc:[[tbxMoneyToReceive text] doubleValue]];
+    }
+    
+    
 }
-*/
+
 
 - (IBAction)btnConfirmQuotation:(id)sender {
     
-    [AppState sharedInstance].moneyToReceive = [[tbxMoneyToReceive text]floatValue];
+    //[AppState sharedInstance].moneyToReceive = [[tbxMoneyToReceive text]floatValue];
+    
+//    DestinyViewController *destinyViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DestinyViewController"];
+//    
+//    destinyViewController.delegate = self;
    
     [self performSegueWithIdentifier:SeguesExchangeToDestiny sender:nil];
     
-    NSLog(@"this is the money: %0.2f", [AppState sharedInstance].moneyToReceive);
+    NSLog(@"this is the money: %0.2f", [[tbxMoneyToReceive text] doubleValue]);
     
 }
 

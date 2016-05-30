@@ -7,6 +7,12 @@
 //
 
 #import "DestinyViewController.h"
+#import "ExchangeViewController.h"
+#import "AppConstant.h"
+
+
+@import FirebaseAuth;
+@import FirebaseDatabase;
 
 @interface DestinyViewController ()
 
@@ -14,14 +20,18 @@
 
 @implementation DestinyViewController
 
-@synthesize lblMoneyToReceive, tbxName, tbxCPF, tbxEmail, tbxPhone, tbxBankName, tbxAccountInfo;
+
+@synthesize lblMoneyToReceive, tbxName, tbxCPF, tbxEmail, tbxPhone, tbxBankName, tbxAccountInfo, moneyToReceiveFromXvc;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [lblMoneyToReceive setText:[NSString stringWithFormat:@"Total to receive R$%0.2f", [[AppState sharedInstance] moneyToReceive]]];
+    //[lblMoneyToReceive setText:[NSString stringWithFormat:@"Total to receive R$%0.2f", moneyToReceiveTotal ]];
     
+    ExchangeViewController *exchangeViewController = [[ExchangeViewController alloc]init];
+    
+    [lblMoneyToReceive setText:[NSString stringWithFormat:@"R$%0.2f", moneyToReceiveFromXvc]];
     
     [self addTextField];
     
@@ -91,18 +101,20 @@
     [lblBankName sizeToFit];
 
     
-    
-    
-//    [tbxName setBorderStyle: UITextBorderStyleNone];
-//    UILabel *lblCPF = [[UILabel alloc]initWithFrame:CGRectZero];
-//    lblCPF.text = @"CPF ";
-//    tbxName.leftView = lblName;
-//    tbxName.leftViewMode = UITextFieldViewModeAlways;
-//    [lblName sizeToFit];
-//    
 }
 
-
+- (IBAction)btnSignOut:(id)sender {
+    FIRAuth *firebaseAuth = [FIRAuth auth];
+    NSError *signOutError;
+    BOOL status = [firebaseAuth signOut:&signOutError];
+    if (!status) {
+        NSLog(@"Error signing out: %@", signOutError);
+        return;
+    }
+    [AppState sharedInstance].signedIn = false;
+    [self performSegueWithIdentifier:SeguesDestinyToSignIn sender:nil];
+    
+}
 
 
 //-(void)addTextField{
@@ -160,6 +172,7 @@
 //-(void)textFieldDidEndEditing:(UITextField *)textField{
 //    NSLog(@"Text field ended editing");
 //}
+
 
 
 @end

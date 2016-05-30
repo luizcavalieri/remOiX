@@ -11,10 +11,13 @@
 #import "Client.h"
 
 
+
 @interface ExchangeViewController : UIViewController
 
 @property (nonatomic) Client *currentClient;
 @property (nonatomic) Exchange *currentExchange;
+
+//@property (nonatomic) CGFloat moneyToReceiveTotal;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblClientName;
 

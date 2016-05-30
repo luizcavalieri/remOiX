@@ -15,6 +15,7 @@ extern NSString *const NotificationKeysSignedIn;
 extern NSString *const SeguesSignInToExchange;
 extern NSString *const SeguesExchangeToSignIn;
 extern NSString *const SeguesExchangeToDestiny;
+extern NSString *const SeguesDestinyToSignIn;
 
 extern NSString *const MessageFieldsname;
 extern NSString *const MessageFieldstext;

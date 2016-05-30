@@ -10,15 +10,25 @@
 #import "Exchange.h"
 #import "Client.h"
 #import "AppState.h"
+#import "ExchangeViewController.h"
 
+@protocol DestinyViewControllerDelegate<NSObject>
+
+- (void)setMoneyToReceive:(CGFloat *)moneyToReceiveTotal;
+
+
+@end
 
 @interface DestinyViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic) Client *currentClient;
 @property (nonatomic) Exchange *currentExchange;
 
+@property (nonatomic) double moneyToReceiveFromXvc;
+
 @property (weak, nonatomic) IBOutlet UILabel *lblMoneyToReceive;
 
+- (IBAction)btnSignOut:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *tbxName;
 @property (weak, nonatomic) IBOutlet UITextField *tbxEmail;
 @property (weak, nonatomic) IBOutlet UITextField *tbxPhone;

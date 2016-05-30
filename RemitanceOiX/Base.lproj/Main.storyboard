@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="413"/>
+            <point key="canvasLocation" x="53" y="409"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="Pvf-RW-fZa">
@@ -160,9 +160,6 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="6Xp-Lg-sgL" kind="show" id="jpA-dp-W1M"/>
-                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fu-fC-RgM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -232,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdT-7d-LxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="-123"/>
+            <point key="canvasLocation" x="672" y="-481"/>
         </scene>
         <!--Destiny View Controller-->
         <scene sceneID="QUh-wK-PeX">
@@ -263,24 +260,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-jJ-7TM">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="sdp-T5-GPy"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.97647058819999999" green="0.63137254899999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem id="Nu0-sy-Zxc">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="kAU-QG-ikM">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YoT-Ts-ufe">
-                                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="SignOut"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0x-ha-7Tk">
                                 <rect key="frame" x="20" y="545" width="560" height="35"/>
                                 <color key="backgroundColor" white="0.8889410298" alpha="1" colorSpace="calibratedWhite"/>
@@ -350,6 +329,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-jJ-7TM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sdp-T5-GPy"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.97647058819999999" green="0.63137254899999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="Nu0-sy-Zxc">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="kAU-QG-ikM">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YoT-Ts-ufe">
+                                                <rect key="frame" x="488" y="7" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="SignOut"/>
+                                                <connections>
+                                                    <action selector="btnSignOut:" destination="SXL-nE-FRd" eventType="touchUpInside" id="2bH-5k-S9e"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -392,11 +392,12 @@
                         <outlet property="tbxEmail" destination="4RB-xc-h4a" id="BnW-Eu-SJN"/>
                         <outlet property="tbxName" destination="1c2-MH-6aP" id="cUs-ik-DuZ"/>
                         <outlet property="tbxPhone" destination="KsH-Rn-2oo" id="fj8-KS-ERr"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SeguesDestinyToSignIn" id="7BW-lT-jo4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmH-2i-bUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="997"/>
+            <point key="canvasLocation" x="2046" y="419"/>
         </scene>
         <!--Exchange View Controller-->
         <scene sceneID="NCg-IL-gHj">
@@ -572,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSK-pu-hXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="997"/>
+            <point key="canvasLocation" x="1213" y="419"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nz1-Go-icU">
@@ -758,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4H-TZ-mhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="997"/>
+            <point key="canvasLocation" x="2808" y="425"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Wpf-JZ-6jv">
@@ -813,7 +814,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q15-Dp-hOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3519" y="997"/>
+            <point key="canvasLocation" x="3653" y="419"/>
         </scene>
     </scenes>
     <resources>
@@ -821,6 +822,7 @@
         <image name="RemitanceOiX.png" width="162" height="162"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="16t-aC-e5l"/>
+        <segue reference="Seo-al-5vM"/>
+        <segue reference="7BW-lT-jo4"/>
     </inferredMetricsTieBreakers>
 </document>
