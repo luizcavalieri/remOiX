@@ -10,16 +10,29 @@
 
 @implementation Client
 
-@synthesize name, email;
+@synthesize name = userName;
+@synthesize email = userEmail;
 
-- (id)initWithStringName:(NSString*) clientName andStringEmail:(NSString *) clientEmail
+
+- (instancetype)init
 {
     self = [super init];
     if (self) {
-        name = clientName;
-        email = clientEmail;
+        userEmail = [[NSString alloc]init];
+        userName = [[NSString alloc] init];
     }
-    return self;
-}
+    return self;}
+
+
+
+//- (id)initWithStringName:(NSString*) clientName andStringEmail:(NSString *) clientEmail
+//{
+//    self = [super init];
+//    if (self) {
+//        name = clientName;
+//        email = clientEmail;
+//    }
+//    return self;
+//}
 
 @end

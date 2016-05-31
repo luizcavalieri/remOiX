@@ -13,7 +13,8 @@
 @property NSString *name;
 @property NSString *email;
 
--(id)initWithStringName: (NSString*) clientName andStringEmail: (NSString *) clientEmail;
+//-(id)initWithStringName: (NSString*) clientName andStringEmail: (NSString *) clientEmail;
+
 
 
 @end

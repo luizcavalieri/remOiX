@@ -8,8 +8,6 @@
 
 #import "DestinyViewController.h"
 #import "ExchangeViewController.h"
-#import "AppConstant.h"
-
 
 @import FirebaseAuth;
 @import FirebaseDatabase;
@@ -21,7 +19,7 @@
 @implementation DestinyViewController
 
 
-@synthesize lblMoneyToReceive, tbxName, tbxCPF, tbxEmail, tbxPhone, tbxBankName, tbxAccountInfo, moneyToReceiveFromXvc;
+@synthesize lblMoneyToReceive, tbxName, tbxCPF, tbxEmail, tbxPhone, tbxBankName, tbxAccountInfo, currentExchange, currentClient;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,13 +27,11 @@
     
     //[lblMoneyToReceive setText:[NSString stringWithFormat:@"Total to receive R$%0.2f", moneyToReceiveTotal ]];
     
-    ExchangeViewController *exchangeViewController = [[ExchangeViewController alloc]init];
+    //ExchangeViewController *exchangeViewController = [[ExchangeViewController alloc]init];
     
-    [lblMoneyToReceive setText:[NSString stringWithFormat:@"R$%0.2f", moneyToReceiveFromXvc]];
+    [lblMoneyToReceive setText:[NSString stringWithFormat:@"%@ and R$%0.2f", [currentClient name], [currentExchange moneyToReceive]]];
     
     [self addTextField];
-    
-    
     
 }
 
@@ -43,6 +39,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)btnFinalConfirmation:(id)sender {
+    [self performSegueWithIdentifier:SeguesDestinyToPayment sender:nil];
+}
+
+
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+
+     
+     if([[segue identifier] isEqualToString:SeguesDestinyToPayment]){
+         
+         ConfirmationViewController *confirmationViewController = (ConfirmationViewController *)[segue destinationViewController];
+         
+         [confirmationViewController setCurrentExchange:currentExchange];
+         [confirmationViewController setCurrentClient:currentClient];
+         
+     }
+
+ }
+
 
 -(void)addTextField{
     
@@ -116,6 +138,11 @@
     
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
+
 
 //-(void)addTextField{
 //    // This allocates a label
@@ -153,15 +180,7 @@
 //    tbxNameCustom.delegate = self;
 //}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 // This method is called once we click inside the textField
 //-(void)textFieldDidBeginEditing:(UITextField *)textField{

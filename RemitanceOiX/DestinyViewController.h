@@ -11,6 +11,8 @@
 #import "Client.h"
 #import "AppState.h"
 #import "ExchangeViewController.h"
+#import "ConfirmationViewController.h"
+#import "AppConstant.h"
 
 @protocol DestinyViewControllerDelegate<NSObject>
 
@@ -23,8 +25,9 @@
 
 @property (nonatomic) Client *currentClient;
 @property (nonatomic) Exchange *currentExchange;
+- (IBAction)btnFinalConfirmation:(id)sender;
 
-@property (nonatomic) double moneyToReceiveFromXvc;
+//@property (nonatomic) double moneyToReceiveFromXvc;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblMoneyToReceive;
 

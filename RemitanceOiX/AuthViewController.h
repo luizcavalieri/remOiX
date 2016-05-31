@@ -14,8 +14,8 @@
 
 @interface AuthViewController : UIViewController
 
-@property (nonatomic) Client *currentClient;
-@property (nonatomic) Exchange *currentExchange;
+@property (strong, nonatomic) Client *currentClient;
+@property (strong, nonatomic) Exchange *currentExchange;
 
 @property (weak, nonatomic) IBOutlet UITextField *tbxUsername;
 @property (weak, nonatomic) IBOutlet UITextField *tbxPassword;
@@ -28,8 +28,5 @@
 
 - (IBAction)btnSignUp:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *lblTest1;
-
-@property (weak, nonatomic) IBOutlet UILabel *lblTest2;
 
 @end

@@ -24,7 +24,7 @@
 
 @implementation AuthViewController
 
-@synthesize tbxPassword, tbxUsername, tbxSignUpName, tbxSignUpEmail, tbxSignUpPhone, tbxSignUpPassword, lblTest1, lblTest2;
+@synthesize tbxPassword, tbxUsername, tbxSignUpName, tbxSignUpEmail, tbxSignUpPhone, tbxSignUpPassword, currentClient;
 
 
 
@@ -41,6 +41,7 @@
 
 - (void)viewDidLoad {
    
+    currentClient = [[Client alloc]init];
    
     
 }
@@ -65,11 +66,22 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    ExchangeViewController *exchangeVieController = [segue destinationViewController];
+    //ExchangeViewController *exchangeVieController = [segue destinationViewController];
     
     //Client *clientForwarder = user.setDisplayName;
     
     //[exchangeVieController setCurrentClient:clientForwarder];
+    
+    if([[segue identifier] isEqualToString:SeguesSignInToExchange]){
+        
+        ExchangeViewController *exchangeViewController = (ExchangeViewController *)[segue destinationViewController];
+        
+//        [exchangeViewController setUserName:[currentClient name]];
+//        [exchangeViewController setUserEmail:[currentClient email]];
+        
+        [exchangeViewController setCurrentClient:currentClient];
+    }
+
     
 }
 
@@ -117,16 +129,18 @@
         [self signedIn:[FIRAuth auth].currentUser];
         
               
-        Client *client = [[Client alloc]init];
+    //    Client *client = [[Client alloc]init];
         
-        client.name = changeRequest.displayName;
-    
+        
         
     }];
 }
 
 - (void)signedIn:(FIRUser *)user {
     [MeasurementHelper sendLoginEvent];
+    
+    currentClient.name = [user displayName];// = changeRequest.displayName;
+    currentClient.email = [user email];
     
     [AppState sharedInstance].displayName = user.displayName.length > 0 ? user.displayName : user.email;
     [AppState sharedInstance].photoUrl = user.photoURL;

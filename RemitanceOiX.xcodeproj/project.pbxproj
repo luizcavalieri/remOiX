@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F40D1DC5324F57A1E9A58CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86349016D14A41CFE79565C0 /* libPods.a */; };
 		523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B34891CF4277C0072DB8D /* DestinyViewController.m */; };
+		529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB4781CFDB2A9001004C8 /* Receiver.m */; };
+		529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */; };
 		52A721431CF05A1300D503A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A721421CF05A1300D503A5 /* GoogleService-Info.plist */; };
 		52A721481CF125EF00D503A5 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A721471CF125EF00D503A5 /* AuthViewController.m */; };
 		52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A7214A1CF129A900D503A5 /* MeasurementHelper.m */; };
@@ -54,6 +56,10 @@
 /* Begin PBXFileReference section */
 		523B34881CF4277C0072DB8D /* DestinyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinyViewController.h; sourceTree = "<group>"; };
 		523B34891CF4277C0072DB8D /* DestinyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinyViewController.m; sourceTree = "<group>"; };
+		529DB4771CFDB2A9001004C8 /* Receiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
+		529DB4781CFDB2A9001004C8 /* Receiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
+		529DB47A1CFDB989001004C8 /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationViewController.h; sourceTree = "<group>"; };
+		529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationViewController.m; sourceTree = "<group>"; };
 		52A721421CF05A1300D503A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52A721461CF125EF00D503A5 /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		52A721471CF125EF00D503A5 /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 				52C558F01CE4924900FCAA1A /* ViewController.m */,
 				523B34881CF4277C0072DB8D /* DestinyViewController.h */,
 				523B34891CF4277C0072DB8D /* DestinyViewController.m */,
+				529DB47A1CFDB989001004C8 /* ConfirmationViewController.h */,
+				529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -171,6 +179,8 @@
 				52A721591CF32FDC00D503A5 /* Exchange.m */,
 				52D0FD0D1CF8501700DECDAA /* Client.h */,
 				52D0FD0E1CF8501700DECDAA /* Client.m */,
+				529DB4771CFDB2A9001004C8 /* Receiver.h */,
+				529DB4781CFDB2A9001004C8 /* Receiver.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -442,9 +452,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */,
 				52A7215A1CF32FDC00D503A5 /* Exchange.m in Sources */,
 				52C558F11CE4924900FCAA1A /* ViewController.m in Sources */,
 				52C558F71CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld in Sources */,
+				529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */,
 				52D0FD0F1CF8501700DECDAA /* Client.m in Sources */,
 				52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */,
 				52C558EE1CE4924900FCAA1A /* AppDelegate.m in Sources */,

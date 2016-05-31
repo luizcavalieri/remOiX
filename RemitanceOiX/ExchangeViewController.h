@@ -14,8 +14,11 @@
 
 @interface ExchangeViewController : UIViewController
 
-@property (nonatomic) Client *currentClient;
-@property (nonatomic) Exchange *currentExchange;
+@property (strong, nonatomic) Client *currentClient;
+@property (strong, nonatomic) Exchange *currentExchange;
+
+@property (nonatomic)  NSString *userName;
+@property (nonatomic) NSString *userEmail;
 
 //@property (nonatomic) CGFloat moneyToReceiveTotal;
 

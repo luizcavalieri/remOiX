@@ -12,9 +12,10 @@
 
 + (AppState *)sharedInstance;
 
-@property (nonatomic) float moneyToReceive;
+//@property (nonatomic) float moneyToReceive;
 @property (nonatomic) BOOL signedIn;
 @property (nonatomic, retain) NSString *displayName;
+@property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSURL *photoUrl;
 
 @end

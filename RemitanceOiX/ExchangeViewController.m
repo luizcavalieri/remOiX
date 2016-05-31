@@ -1,4 +1,4 @@
-//
+ //
 //  ExchangeViewController.m
 //  RemitanceOiX
 //
@@ -22,7 +22,7 @@
 
 @implementation ExchangeViewController
 
-@synthesize tbxServiceFee, tbxTotalToPay, tbxMoneyToSend, tbxMoneyToReceive, lblExchangeRate, currentClient, currentExchange, lblClientName;
+@synthesize tbxServiceFee, tbxTotalToPay, tbxMoneyToSend, tbxMoneyToReceive, lblExchangeRate, currentClient, currentExchange, lblClientName, userName, userEmail;
 
 -(BOOL) textFieldShouldReturn: (UITextField *) textField {
     [textField resignFirstResponder];
@@ -33,23 +33,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    Exchange *currentRate = [[Exchange alloc]init];
+    //currentClient = [[Client alloc] init];
     
-    [lblExchangeRate setText:[NSString stringWithFormat:@"%0.2f", [currentRate realExchange]]];
-    [tbxServiceFee setText:[NSString stringWithFormat:@"%0.2f", [currentRate serviceFee]]];
+    //currentClient = [[Client alloc] init];
+    
+    currentExchange = [[Exchange alloc] init];
+    
+//    currentClient.name = [[AppState sharedInstance] displayName];
+//    currentClient.email = [[AppState sharedInstance] email];
+//    
+    [lblExchangeRate setText:[NSString stringWithFormat:@"%0.2f", [currentExchange realExchange]]];
+    [tbxServiceFee setText:[NSString stringWithFormat:@"%0.2f", [currentExchange serviceFee]]];
     
     tbxMoneyToReceive.enabled = false;
     tbxTotalToPay.enabled = false;
     tbxServiceFee.enabled = false;
     
-    //NSString *clientName =  [AppState sharedInstance] displayName;
-    
-    [lblClientName setText:[NSString stringWithFormat:@"Goo'day %@", [[AppState sharedInstance] displayName]]];
-    
-    
+    [lblClientName setText:[NSString stringWithFormat:@"Goo'day %@", [currentClient name]]];
     
 }
-
 
 
 - (void)didReceiveMemoryWarning {
@@ -62,27 +64,22 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
     if([[segue identifier] isEqualToString:SeguesExchangeToDestiny]){
     
     DestinyViewController *destinyViewController = (DestinyViewController *)[segue destinationViewController];
     
-    [destinyViewController setMoneyToReceiveFromXvc:[[tbxMoneyToReceive text] doubleValue]];
+    [destinyViewController setCurrentExchange:currentExchange];
+    [destinyViewController setCurrentClient:currentClient];
+        
     }
-    
     
 }
 
 
 - (IBAction)btnConfirmQuotation:(id)sender {
-    
-    //[AppState sharedInstance].moneyToReceive = [[tbxMoneyToReceive text]floatValue];
-    
-//    DestinyViewController *destinyViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DestinyViewController"];
-//    
-//    destinyViewController.delegate = self;
    
     [self performSegueWithIdentifier:SeguesExchangeToDestiny sender:nil];
     
@@ -92,16 +89,11 @@
 
 - (IBAction)tbxMoneyToSendChange:(id)sender {
     
-    Exchange *xCalculation = [[Exchange alloc]init];
+    [currentExchange setMoneyToSend:[[tbxMoneyToSend text]doubleValue]];
     
-    [xCalculation setMoneyToSend:[[tbxMoneyToSend text]doubleValue]];
-    
-    [tbxMoneyToReceive setText:[NSString stringWithFormat:@"%0.2f", [xCalculation moneyToReceive]]];
+    [tbxMoneyToReceive setText:[NSString stringWithFormat:@"%0.2f", [currentExchange moneyToReceive]]];
         
-    [tbxTotalToPay setText:[NSString stringWithFormat:@"%0.2f", [xCalculation totalToPay]]];
-        
-   
-    
+    [tbxTotalToPay setText:[NSString stringWithFormat:@"%0.2f", [currentExchange totalToPay]]];
 }
 
 - (IBAction)btnSignOut:(id)sender {
@@ -123,10 +115,5 @@
 }
 
 
-
-
-//-(void)textFieldDidChange :(UITextField *)tbxMoneyToSend{
-//    
-//}
 
 @end
