@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4F40D1DC5324F57A1E9A58CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86349016D14A41CFE79565C0 /* libPods.a */; };
 		523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B34891CF4277C0072DB8D /* DestinyViewController.m */; };
+		527752E11D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */; };
+		527752EA1D02CED20091EFAB /* ExchangeList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E31D02CED20091EFAB /* ExchangeList+CoreDataProperties.m */; };
+		527752EB1D02CED20091EFAB /* ExchangeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E51D02CED20091EFAB /* ExchangeList.m */; };
+		527752EC1D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E71D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m */; };
+		527752ED1D02CED20091EFAB /* ExchangeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E91D02CED20091EFAB /* ExchangeDate.m */; };
 		529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB4781CFDB2A9001004C8 /* Receiver.m */; };
 		529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */; };
 		52A721431CF05A1300D503A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A721421CF05A1300D503A5 /* GoogleService-Info.plist */; };
@@ -56,6 +61,15 @@
 /* Begin PBXFileReference section */
 		523B34881CF4277C0072DB8D /* DestinyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinyViewController.h; sourceTree = "<group>"; };
 		523B34891CF4277C0072DB8D /* DestinyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinyViewController.m; sourceTree = "<group>"; };
+		527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelExchange.xcdatamodel; sourceTree = "<group>"; };
+		527752E21D02CED20091EFAB /* ExchangeList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		527752E31D02CED20091EFAB /* ExchangeList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		527752E41D02CED20091EFAB /* ExchangeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeList.h; sourceTree = "<group>"; };
+		527752E51D02CED20091EFAB /* ExchangeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeList.m; sourceTree = "<group>"; };
+		527752E61D02CED20091EFAB /* ExchangeDate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeDate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		527752E71D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeDate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		527752E81D02CED20091EFAB /* ExchangeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDate.h; sourceTree = "<group>"; };
+		527752E91D02CED20091EFAB /* ExchangeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDate.m; sourceTree = "<group>"; };
 		529DB4771CFDB2A9001004C8 /* Receiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
 		529DB4781CFDB2A9001004C8 /* Receiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
 		529DB47A1CFDB989001004C8 /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationViewController.h; sourceTree = "<group>"; };
@@ -149,6 +163,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		527752DE1D02CC1D0091EFAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		52A7215B1CF3304B00D503A5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +232,15 @@
 		52C558E81CE4924900FCAA1A /* RemitanceOiX */ = {
 			isa = PBXGroup;
 			children = (
+				527752E21D02CED20091EFAB /* ExchangeList+CoreDataProperties.h */,
+				527752E31D02CED20091EFAB /* ExchangeList+CoreDataProperties.m */,
+				527752E41D02CED20091EFAB /* ExchangeList.h */,
+				527752E51D02CED20091EFAB /* ExchangeList.m */,
+				527752E61D02CED20091EFAB /* ExchangeDate+CoreDataProperties.h */,
+				527752E71D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m */,
+				527752E81D02CED20091EFAB /* ExchangeDate.h */,
+				527752E91D02CED20091EFAB /* ExchangeDate.m */,
+				527752DE1D02CC1D0091EFAB /* Model */,
 				52A7215C1CF3307900D503A5 /* Classes */,
 				52A7215B1CF3304B00D503A5 /* ViewController */,
 				52A721421CF05A1300D503A5 /* GoogleService-Info.plist */,
@@ -456,6 +487,7 @@
 				52A7215A1CF32FDC00D503A5 /* Exchange.m in Sources */,
 				52C558F11CE4924900FCAA1A /* ViewController.m in Sources */,
 				52C558F71CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld in Sources */,
+				527752E11D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld in Sources */,
 				529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */,
 				52D0FD0F1CF8501700DECDAA /* Client.m in Sources */,
 				52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */,
@@ -464,8 +496,12 @@
 				52C558EB1CE4924900FCAA1A /* main.m in Sources */,
 				52A721511CF12AF600D503A5 /* AppConstant.m in Sources */,
 				52A721481CF125EF00D503A5 /* AuthViewController.m in Sources */,
+				527752EA1D02CED20091EFAB /* ExchangeList+CoreDataProperties.m in Sources */,
+				527752EC1D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m in Sources */,
+				527752EB1D02CED20091EFAB /* ExchangeList.m in Sources */,
 				52C559271CE5D7F800FCAA1A /* FormController.m in Sources */,
 				52A7214E1CF12A9900D503A5 /* AppState.m in Sources */,
+				527752ED1D02CED20091EFAB /* ExchangeDate.m in Sources */,
 				52A721571CF2D0D900D503A5 /* ExchangeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,8 +645,38 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98275D31E350E3556E1C25F8 /* Pods-RemitanceOiX.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Headers",
+					"$(inherited)/**",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCrash\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseRemoteConfig\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseStorage\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleIPhoneUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RKValueTransformers\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RestKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/SOCKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/TransitionKit\"/**",
+				);
 				INFOPLIST_FILE = RemitanceOiX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.interactivehippo.RemitanceOiX;
@@ -622,8 +688,38 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB98CBA9EC547CEF05262BE1 /* Pods-RemitanceOiX.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Headers",
+					"$(inherited)/**",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCrash\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseRemoteConfig\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseStorage\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleIPhoneUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"/**",
+					"\"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RKValueTransformers\"/**",
+					"\"${PODS_ROOT}/Headers/Public/RestKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/SOCKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/TransitionKit\"/**",
+				);
 				INFOPLIST_FILE = RemitanceOiX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.interactivehippo.RemitanceOiX;
@@ -719,6 +815,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */,
+			);
+			currentVersion = 527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */;
+			path = DataModelExchange.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		52C558F51CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

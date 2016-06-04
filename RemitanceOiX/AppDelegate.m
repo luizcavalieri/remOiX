@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <RestKit/CoreData.h>
+#import <RestKit/RestKit.h>
 
 @import Firebase;
 @import FirebaseDatabase;
@@ -25,6 +27,56 @@
     // Override point for customization after application launch.
     
     [FIRApp configure];
+    
+    
+    NSURL *baseURL = [NSURL URLWithString:@"http://apilayer.net/api/live?access_key=75c3fa478f911d93a5cebf8fd64943dc&currencies=BRL,AUD&source=USD&format=1"];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    
+    // Initialize managed object model from bundle
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    // Initialize managed object store
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    objectManager.managedObjectStore = managedObjectStore;
+    
+    // Complete Core Data stack initialization
+    [managedObjectStore createPersistentStoreCoordinator];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"ExchangesDB.sqlite"];
+    NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"RKSeedDatabase" ofType:@"sqlite"];
+    NSError *error;
+    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:seedPath withConfiguration:nil options:nil error:&error];
+    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+    
+    // Create the managed object contexts
+    [managedObjectStore createManagedObjectContexts];
+    
+    // Configure a managed object cache to ensure we do not create duplicate objects
+    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+    
+    
+    RKEntityMapping *exchangeListMapping = [RKEntityMapping mappingForEntityForName:@"ExchangeList" inManagedObjectStore:managedObjectStore];
+    exchangeListMapping.identificationAttributes = @[ @"usdbrl" ];
+    
+    
+    [exchangeListMapping addAttributeMappingsFromDictionary:@{ @"usdbrl" : @"usdbrl", @"usdaud" : @"usdaud" }];
+    
+    RKEntityMapping *exchangeDateMapping = [RKEntityMapping mappingForEntityForName:@"ExchangeDate" inManagedObjectStore:managedObjectStore];
+    exchangeDateMapping.identificationAttributes = @[@"timestamp"];
+    [exchangeDateMapping addAttributeMappingsFromArray:@[@"success", @"terms", @"timestamp", @"privacy", @"source"]];
+    
+    [exchangeListMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"quotes" toKeyPath:@"quotes" withMapping:exchangeDateMapping]];
+    
+    RKResponseDescriptor *exchangeListResponseDescriptor =
+    [RKResponseDescriptor responseDescriptorWithMapping:exchangeListMapping
+                                                 method:RKRequestMethodGET
+                                            pathPattern:@""
+                                                keyPath:nil
+                                            statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
+     ];
+    
+    [objectManager addResponseDescriptor:exchangeListResponseDescriptor];
+    
+    // Enable Activity Indicator Spinner
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     
     return YES;

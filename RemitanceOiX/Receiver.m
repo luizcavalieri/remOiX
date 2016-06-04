@@ -30,7 +30,8 @@
         receiverAccountInfo = [[NSString alloc]init];
         receiverBankName = [[NSString alloc]init];
     }
-    return self;}
+    return self;
+}
 
 
 @end

@@ -13,6 +13,7 @@
 #import "ExchangeViewController.h"
 #import "ConfirmationViewController.h"
 #import "AppConstant.h"
+#import "Receiver.h"
 
 @protocol DestinyViewControllerDelegate<NSObject>
 
@@ -23,12 +24,14 @@
 
 @interface DestinyViewController : UIViewController<UITextFieldDelegate>
 
+@property (nonatomic) Receiver *currentReceiver;
 @property (nonatomic) Client *currentClient;
 @property (nonatomic) Exchange *currentExchange;
 - (IBAction)btnFinalConfirmation:(id)sender;
 
 //@property (nonatomic) double moneyToReceiveFromXvc;
 
+- (IBAction)tbxFinishEditing:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblMoneyToReceive;
 
 - (IBAction)btnSignOut:(id)sender;
@@ -38,5 +41,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *tbxCPF;
 @property (weak, nonatomic) IBOutlet UITextField *tbxAccountInfo;
 @property (weak, nonatomic) IBOutlet UITextField *tbxBankName;
+
+@property NSString *receiverTbxName;
+@property NSString *receiverTbxCPF;
+@property NSString *receiverTbxEmail;
+@property NSString *receiverTbxPhone;
+@property NSString *receiverTbxBankName;
+@property NSString *receiverTbxAccountInfo;
 
 @end

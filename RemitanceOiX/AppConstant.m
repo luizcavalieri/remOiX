@@ -25,5 +25,8 @@ NSString *const MessageFieldsAccountInfo = @"Account Info";
 NSString *const MessageFieldsPhone = @"Phone";
 NSString *const MessageFieldsEmail = @"Email";
 NSString *const MessageFieldsBankName = @"Bank Name";
+NSString *const UrlDataRetrieval = @"http://apilayer.net/api/live?access_key=75c3fa478f911d93a5cebf8fd64943dc&currencies=BRL,AUD&source=USD&format=1";
+
+//NSString *const UrlDataRetrieval = @"http://www.apilayer.net/api/live?access_key=75c3fa478f911d93a5cebf8fd64943dc&format=1";
 
 @end

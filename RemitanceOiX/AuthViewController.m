@@ -24,7 +24,7 @@
 
 @implementation AuthViewController
 
-@synthesize tbxPassword, tbxUsername, tbxSignUpName, tbxSignUpEmail, tbxSignUpPhone, tbxSignUpPassword, currentClient;
+@synthesize tbxPassword, tbxUsername, tbxSignUpName, tbxSignUpEmail, tbxSignUpPhone, tbxSignUpPassword, currentClient, activityIndicatorView;
 
 
 
@@ -42,7 +42,7 @@
 - (void)viewDidLoad {
    
     currentClient = [[Client alloc]init];
-   
+    
     
 }
 
@@ -66,18 +66,10 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    //ExchangeViewController *exchangeVieController = [segue destinationViewController];
-    
-    //Client *clientForwarder = user.setDisplayName;
-    
-    //[exchangeVieController setCurrentClient:clientForwarder];
     
     if([[segue identifier] isEqualToString:SeguesSignInToExchange]){
         
         ExchangeViewController *exchangeViewController = (ExchangeViewController *)[segue destinationViewController];
-        
-//        [exchangeViewController setUserName:[currentClient name]];
-//        [exchangeViewController setUserEmail:[currentClient email]];
         
         [exchangeViewController setCurrentClient:currentClient];
     }
@@ -90,29 +82,37 @@
     NSString *email = tbxUsername.text;
     NSString *password = tbxPassword.text;
     
-    
-    //lblTest2.text = [NSString stringWithFormat:@"Email: %@", email];
-    //lblTest1.text = [NSString stringWithFormat:@"Password: %@", password];
+    [self startActivityIndicator];
     
     [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if(error){
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Try Again" message:@"Sorry Login not Completed."
-                preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-            
-            [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
-            
+            [self showAlert:@"Sorry, try it again!" message:error.localizedDescription];
+            [activityIndicatorView stopAnimating];
             NSLog(@"%@", error.localizedDescription);
             return ;
         }
         [self signedIn:user];
     }];
     
-    //NSLog(@"The user logged in is: %@", [AppState sharedInstance].displayName);
+    [activityIndicatorView stopAnimating];
     
 }
+
+-(void)showAlert:(NSString *)title message:(NSString *) message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 - (void)setDisplayName:(FIRUser *)user {
     //  [self signedIn:nil];
@@ -155,23 +155,36 @@
 - (IBAction)btnSignUp:(id)sender {
     NSString *email = tbxUsername.text;
     NSString *password = tbxPassword.text;
+    
+    [self startActivityIndicator];
+    
     [[FIRAuth auth] createUserWithEmail:email
                                password:password
                              completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
                                  if (error) {
-                                     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Please try again" message:@"Please check if you inserted the correct email address or if have already signup with this email."
-                                                                                             preferredStyle:UIAlertControllerStyleAlert];
                                      
-                                     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-                                     
-                                     [alert addAction:defaultAction];
-                                     [self presentViewController:alert animated:YES completion:nil];
+                                     [self showAlert:@"Sorry, try it again!" message:error.localizedDescription];
                                      
                                      NSLog(@"%@", error.localizedDescription);
                                      return;
                                  }
                                  [self setDisplayName:user];
                              }];
+    
+    [activityIndicatorView stopAnimating];
+}
+
+-(void)startActivityIndicator{
+    
+    //[activityIndicatorView setCenter:CGPointMake(160,124)];
+    [self.view addSubview:activityIndicatorView];
+    [NSThread detachNewThreadSelector:@selector(threadStartAnimating) toTarget:self withObject:nil];
+
+}
+
+
+- (void) threadStartAnimating {
+    [activityIndicatorView startAnimating];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

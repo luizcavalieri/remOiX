@@ -14,13 +14,14 @@
 
 @implementation ConfirmationViewController
 
-@synthesize currentClient, currentExchange, lblReferenceId, lblAmountTotalPayment;
+@synthesize currentClient, currentExchange, lblReferenceId, lblAmountTotalPayment, currentReceiver;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [lblAmountTotalPayment setText:[NSString stringWithFormat:@"Amount: AUD%0.2f", [currentExchange totalToPay]]];
+    [lblReferenceId setText:[NSString stringWithFormat:@"Test: %@", [currentReceiver name]]];
     
     
 }

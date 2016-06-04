@@ -81,10 +81,14 @@
                                     <action selector="btnSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dur-VJ-X6v"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="d5L-0q-hen">
+                                <rect key="frame" x="290" y="198" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mmi-GC-cmH" firstAttribute="top" secondItem="YjA-gK-wy6" secondAttribute="bottom" constant="3" id="1gf-A9-u3J"/>
+                            <constraint firstItem="YjA-gK-wy6" firstAttribute="top" secondItem="d5L-0q-hen" secondAttribute="bottom" constant="1" id="2Pn-KM-S8n"/>
                             <constraint firstItem="9vX-7H-A48" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Gj-BQ-mfx"/>
                             <constraint firstItem="aRf-CY-DJZ" firstAttribute="leading" secondItem="btc-zV-YrO" secondAttribute="leading" id="4K4-zC-Elo"/>
                             <constraint firstItem="oHJ-Od-fjX" firstAttribute="top" secondItem="Uaw-Lj-jZO" secondAttribute="bottom" constant="14" id="8Mv-PB-WwB"/>
@@ -101,6 +105,7 @@
                             <constraint firstItem="LCc-B8-dof" firstAttribute="centerX" secondItem="YjA-gK-wy6" secondAttribute="centerX" id="W00-3c-V1H"/>
                             <constraint firstItem="Mmi-GC-cmH" firstAttribute="trailing" secondItem="aRf-CY-DJZ" secondAttribute="trailing" id="eF5-w1-sQw"/>
                             <constraint firstItem="Mmi-GC-cmH" firstAttribute="leading" secondItem="aRf-CY-DJZ" secondAttribute="leading" id="hUt-Qt-G3B"/>
+                            <constraint firstItem="d5L-0q-hen" firstAttribute="centerX" secondItem="YjA-gK-wy6" secondAttribute="centerX" id="j6v-My-FTM"/>
                             <constraint firstItem="YjA-gK-wy6" firstAttribute="leading" secondItem="Mmi-GC-cmH" secondAttribute="leading" id="mQm-fJ-Bpf"/>
                             <constraint firstItem="btc-zV-YrO" firstAttribute="trailing" secondItem="Uaw-Lj-jZO" secondAttribute="trailing" id="pM8-DD-X27"/>
                             <constraint firstItem="Uaw-Lj-jZO" firstAttribute="leading" secondItem="oHJ-Od-fjX" secondAttribute="leading" id="q2j-wE-bda"/>
@@ -110,6 +115,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="d5L-0q-hen" id="gHp-Sb-q3w"/>
                         <outlet property="tbxPassword" destination="btc-zV-YrO" id="sbf-7h-47L"/>
                         <outlet property="tbxUsername" destination="Mmi-GC-cmH" id="SLd-oy-85e"/>
                         <segue destination="6Xp-Lg-sgL" kind="show" identifier="SeguesSignInToExchange" id="Seo-al-5vM"/>
@@ -209,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="17" id="LKC-Kq-vaa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-3x-fVQ">
@@ -219,6 +225,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="tbxFinishEditing:" destination="SXL-nE-FRd" eventType="editingDidEnd" id="3Bm-ju-PK8"/>
+                                </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-jJ-7TM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -390,7 +399,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sR-Go-ktb">
                                 <rect key="frame" x="538" y="49" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V56-wf-q14">

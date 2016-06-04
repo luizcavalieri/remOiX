@@ -13,12 +13,14 @@
 #import "ExchangeViewController.h"
 #import "ConfirmationViewController.h"
 #import "AppConstant.h"
+#import "Receiver.h"
 
 
 @interface ConfirmationViewController : UIViewController
 
-@property (nonatomic) Client *currentClient;
-@property (nonatomic) Exchange *currentExchange;
+@property (strong, nonatomic) Client *currentClient;
+@property (strong, nonatomic) Exchange *currentExchange;
+@property (strong, nonatomic) Receiver *currentReceiver;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblAmountTotalPayment;
 @property (weak, nonatomic) IBOutlet UILabel *lblReferenceId;

@@ -20,9 +20,11 @@
 
 @end
 
+#define dataRetrievalURL @"http://apilayer.net/api/live?access_key=75c3fa478f911d93a5cebf8fd64943dc&currencies=BRL,AUD&source=USD&format=1";
+
 @implementation ExchangeViewController
 
-@synthesize tbxServiceFee, tbxTotalToPay, tbxMoneyToSend, tbxMoneyToReceive, lblExchangeRate, currentClient, currentExchange, lblClientName, userName, userEmail;
+@synthesize tbxServiceFee, tbxTotalToPay, tbxMoneyToSend, tbxMoneyToReceive, lblExchangeRate, currentClient, currentExchange, lblClientName, userName, userEmail, json, exchange;
 
 -(BOOL) textFieldShouldReturn: (UITextField *) textField {
     [textField resignFirstResponder];
@@ -32,10 +34,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //currentClient = [[Client alloc] init];
-    
-    //currentClient = [[Client alloc] init];
     
     currentExchange = [[Exchange alloc] init];
     
@@ -49,6 +47,8 @@
     tbxTotalToPay.enabled = false;
     tbxServiceFee.enabled = false;
     
+    [self requestData];
+    
     [lblClientName setText:[NSString stringWithFormat:@"Goo'day %@", [currentClient name]]];
     
 }
@@ -57,6 +57,74 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)requestData{
+    
+    NSString * requestPath = @"";
+    
+    [[RKObjectManager sharedManager]
+     getObjectsAtPath:requestPath
+     parameters:nil
+     success: ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+         //articles have been saved in core data by now
+         [self fetchQuotesFromContext];
+     }
+     failure: ^(RKObjectRequestOperation *operation, NSError *error) {
+         RKLogError(@"Load failed with error: %@", error);
+     }
+     ];
+    
+}
+
+- (void)fetchQuotesFromContext {
+    
+    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ExchangeList"];
+    
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"usdaud" ascending:YES];
+    fetchRequest.sortDescriptors = @[descriptor];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    ExchangeList *exchangeList = [fetchedObjects firstObject];
+    
+    self.quotes = [exchangeList.quotes allObjects];
+    
+    currentExchange.realExchange = [[exchangeList usdbrl] doubleValue ] / [[exchangeList usdaud]doubleValue];
+    
+    NSLog(@"%@", [exchangeList usdbrl]);
+    
+    //[self.tableView reloadData];
+    
+}
+
+
+- (void)retrieveData {
+    
+    NSURL * url = [NSURL URLWithString:UrlDataRetrieval];
+    NSData * data = [NSData dataWithContentsOfURL:url];
+    
+    json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    
+    //exchange = [[NSMutableArray alloc]init];
+    
+    //exchange = [json objectForKey:@"quotes"];
+//    
+//    for(int i = 0; i < json.count; i++){
+//        NSString * firstExchange = [[json objectAtIndex:2] objectForKey:@"USDBRL"];
+//        NSLog(@"The exchange is: %@", firstExchange);
+//    }
+    
+    NSString * firstExchange = [[json objectAtIndex:0] objectForKey:@"quotes"];
+    NSLog(@"The exchange is: %@", firstExchange);
+
+    
+    //currentExchange.realExchange = 2.36;
+    
 }
 
 

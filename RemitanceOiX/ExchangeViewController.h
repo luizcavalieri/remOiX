@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
 #import "Exchange.h"
 #import "Client.h"
+#import "ExchangeList.h"
+#import "ExchangeDate.h"
 
 
 
@@ -19,6 +23,11 @@
 
 @property (nonatomic)  NSString *userName;
 @property (nonatomic) NSString *userEmail;
+
+@property (nonatomic, strong) NSMutableArray * json;
+@property (nonatomic, strong) NSMutableArray * exchange;
+
+@property NSArray * quotes;
 
 //@property (nonatomic) CGFloat moneyToReceiveTotal;
 
@@ -32,6 +41,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblExchangeRate;
 
+
+- (void) retrieveData;
 - (IBAction)btnConfirmQuotation:(id)sender;
 - (IBAction)tbxMoneyToSendChange:(id)sender;
 - (IBAction)btnSignOut:(id)sender;

@@ -17,6 +17,9 @@
 @property (strong, nonatomic) Client *currentClient;
 @property (strong, nonatomic) Exchange *currentExchange;
 
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+
 @property (weak, nonatomic) IBOutlet UITextField *tbxUsername;
 @property (weak, nonatomic) IBOutlet UITextField *tbxPassword;
 - (IBAction)btnLogin:(id)sender;

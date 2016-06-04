@@ -25,5 +25,6 @@ extern NSString *const MessageFieldsPhone;
 extern NSString *const MessageFieldsEmail;
 extern NSString *const MessageFieldsBankName;
 extern NSString *const MessageFieldsphotoUrl;
+extern NSString *const UrlDataRetrieval;
 
 @end
