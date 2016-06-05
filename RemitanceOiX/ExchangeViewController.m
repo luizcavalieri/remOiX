@@ -62,7 +62,7 @@
 
 - (void)requestData{
     
-    NSString * requestPath = @"";
+    NSString * requestPath = @"latest?symbols=AUD,BRL";
     
     [[RKObjectManager sharedManager]
      getObjectsAtPath:requestPath
@@ -83,7 +83,7 @@
     NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ExchangeList"];
     
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"usdaud" ascending:YES];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"aud" ascending:YES];
     fetchRequest.sortDescriptors = @[descriptor];
     
     NSError *error = nil;
@@ -91,11 +91,11 @@
     
     ExchangeList *exchangeList = [fetchedObjects firstObject];
     
-    self.quotes = [exchangeList.quotes allObjects];
+    self.quotes = [exchangeList.rates allObjects];
     
-    currentExchange.realExchange = [[exchangeList usdbrl] doubleValue ] / [[exchangeList usdaud]doubleValue];
+    //currentExchange.realExchange = [[exchangeList usdbrl] doubleValue ] / [[exchangeList usdaud]doubleValue];
     
-    NSLog(@"%@", [exchangeList usdbrl]);
+    NSLog(@"%@", [exchangeList brl]);
     
     //[self.tableView reloadData];
     

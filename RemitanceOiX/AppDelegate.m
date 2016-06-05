@@ -29,7 +29,7 @@
     [FIRApp configure];
     
     
-    NSURL *baseURL = [NSURL URLWithString:@"http://apilayer.net/api/live?access_key=75c3fa478f911d93a5cebf8fd64943dc&currencies=BRL,AUD&source=USD&format=1"];
+    NSURL *baseURL = [NSURL URLWithString:@"http://api.fixer.io/"];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
     
     // Initialize managed object model from bundle
@@ -54,16 +54,16 @@
     
     
     RKEntityMapping *exchangeListMapping = [RKEntityMapping mappingForEntityForName:@"ExchangeList" inManagedObjectStore:managedObjectStore];
-    exchangeListMapping.identificationAttributes = @[ @"usdbrl" ];
+    exchangeListMapping.identificationAttributes = @[ @"brl" ];
     
     
-    [exchangeListMapping addAttributeMappingsFromDictionary:@{ @"usdbrl" : @"usdbrl", @"usdaud" : @"usdaud" }];
+    [exchangeListMapping addAttributeMappingsFromDictionary:@{ @"aud" : @"aud" , @"brl" : @"brl"}];
     
     RKEntityMapping *exchangeDateMapping = [RKEntityMapping mappingForEntityForName:@"ExchangeDate" inManagedObjectStore:managedObjectStore];
-    exchangeDateMapping.identificationAttributes = @[@"timestamp"];
-    [exchangeDateMapping addAttributeMappingsFromArray:@[@"success", @"terms", @"timestamp", @"privacy", @"source"]];
+    exchangeDateMapping.identificationAttributes = @[@"date"];
+    [exchangeDateMapping addAttributeMappingsFromArray:@[@"base", @"date"]];
     
-    [exchangeListMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"quotes" toKeyPath:@"quotes" withMapping:exchangeDateMapping]];
+    [exchangeListMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"rates" toKeyPath:@"rates" withMapping:exchangeDateMapping]];
     
     RKResponseDescriptor *exchangeListResponseDescriptor =
     [RKResponseDescriptor responseDescriptorWithMapping:exchangeListMapping

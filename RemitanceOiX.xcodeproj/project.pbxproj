@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4F40D1DC5324F57A1E9A58CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86349016D14A41CFE79565C0 /* libPods.a */; };
+		5227C8A91D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A21D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m */; };
+		5227C8AA1D03F34200FBAAD0 /* ExchangeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A41D03F34200FBAAD0 /* ExchangeDate.m */; };
+		5227C8AB1D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A61D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m */; };
+		5227C8AC1D03F34200FBAAD0 /* ExchangeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A81D03F34200FBAAD0 /* ExchangeList.m */; };
 		523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B34891CF4277C0072DB8D /* DestinyViewController.m */; };
 		527752E11D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */; };
-		527752EA1D02CED20091EFAB /* ExchangeList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E31D02CED20091EFAB /* ExchangeList+CoreDataProperties.m */; };
-		527752EB1D02CED20091EFAB /* ExchangeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E51D02CED20091EFAB /* ExchangeList.m */; };
-		527752EC1D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E71D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m */; };
-		527752ED1D02CED20091EFAB /* ExchangeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527752E91D02CED20091EFAB /* ExchangeDate.m */; };
 		529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB4781CFDB2A9001004C8 /* Receiver.m */; };
 		529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */; };
 		52A721431CF05A1300D503A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A721421CF05A1300D503A5 /* GoogleService-Info.plist */; };
@@ -59,17 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5227C8A11D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeDate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5227C8A21D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeDate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5227C8A31D03F34200FBAAD0 /* ExchangeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDate.h; sourceTree = "<group>"; };
+		5227C8A41D03F34200FBAAD0 /* ExchangeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDate.m; sourceTree = "<group>"; };
+		5227C8A51D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5227C8A61D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5227C8A71D03F34200FBAAD0 /* ExchangeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeList.h; sourceTree = "<group>"; };
+		5227C8A81D03F34200FBAAD0 /* ExchangeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeList.m; sourceTree = "<group>"; };
 		523B34881CF4277C0072DB8D /* DestinyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinyViewController.h; sourceTree = "<group>"; };
 		523B34891CF4277C0072DB8D /* DestinyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinyViewController.m; sourceTree = "<group>"; };
 		527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelExchange.xcdatamodel; sourceTree = "<group>"; };
-		527752E21D02CED20091EFAB /* ExchangeList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeList+CoreDataProperties.h"; sourceTree = "<group>"; };
-		527752E31D02CED20091EFAB /* ExchangeList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeList+CoreDataProperties.m"; sourceTree = "<group>"; };
-		527752E41D02CED20091EFAB /* ExchangeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeList.h; sourceTree = "<group>"; };
-		527752E51D02CED20091EFAB /* ExchangeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeList.m; sourceTree = "<group>"; };
-		527752E61D02CED20091EFAB /* ExchangeDate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeDate+CoreDataProperties.h"; sourceTree = "<group>"; };
-		527752E71D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeDate+CoreDataProperties.m"; sourceTree = "<group>"; };
-		527752E81D02CED20091EFAB /* ExchangeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDate.h; sourceTree = "<group>"; };
-		527752E91D02CED20091EFAB /* ExchangeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDate.m; sourceTree = "<group>"; };
 		529DB4771CFDB2A9001004C8 /* Receiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
 		529DB4781CFDB2A9001004C8 /* Receiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
 		529DB47A1CFDB989001004C8 /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationViewController.h; sourceTree = "<group>"; };
@@ -210,6 +210,14 @@
 		52C558DD1CE4924900FCAA1A = {
 			isa = PBXGroup;
 			children = (
+				5227C8A11D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.h */,
+				5227C8A21D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m */,
+				5227C8A31D03F34200FBAAD0 /* ExchangeDate.h */,
+				5227C8A41D03F34200FBAAD0 /* ExchangeDate.m */,
+				5227C8A51D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.h */,
+				5227C8A61D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m */,
+				5227C8A71D03F34200FBAAD0 /* ExchangeList.h */,
+				5227C8A81D03F34200FBAAD0 /* ExchangeList.m */,
 				52C558E81CE4924900FCAA1A /* RemitanceOiX */,
 				52C559051CE4924900FCAA1A /* RemitanceOiXTests */,
 				52C559101CE4924900FCAA1A /* RemitanceOiXUITests */,
@@ -232,14 +240,6 @@
 		52C558E81CE4924900FCAA1A /* RemitanceOiX */ = {
 			isa = PBXGroup;
 			children = (
-				527752E21D02CED20091EFAB /* ExchangeList+CoreDataProperties.h */,
-				527752E31D02CED20091EFAB /* ExchangeList+CoreDataProperties.m */,
-				527752E41D02CED20091EFAB /* ExchangeList.h */,
-				527752E51D02CED20091EFAB /* ExchangeList.m */,
-				527752E61D02CED20091EFAB /* ExchangeDate+CoreDataProperties.h */,
-				527752E71D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m */,
-				527752E81D02CED20091EFAB /* ExchangeDate.h */,
-				527752E91D02CED20091EFAB /* ExchangeDate.m */,
 				527752DE1D02CC1D0091EFAB /* Model */,
 				52A7215C1CF3307900D503A5 /* Classes */,
 				52A7215B1CF3304B00D503A5 /* ViewController */,
@@ -483,12 +483,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5227C8AA1D03F34200FBAAD0 /* ExchangeDate.m in Sources */,
 				529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */,
+				5227C8A91D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m in Sources */,
 				52A7215A1CF32FDC00D503A5 /* Exchange.m in Sources */,
 				52C558F11CE4924900FCAA1A /* ViewController.m in Sources */,
 				52C558F71CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld in Sources */,
 				527752E11D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld in Sources */,
 				529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */,
+				5227C8AC1D03F34200FBAAD0 /* ExchangeList.m in Sources */,
 				52D0FD0F1CF8501700DECDAA /* Client.m in Sources */,
 				52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */,
 				52C558EE1CE4924900FCAA1A /* AppDelegate.m in Sources */,
@@ -496,13 +499,10 @@
 				52C558EB1CE4924900FCAA1A /* main.m in Sources */,
 				52A721511CF12AF600D503A5 /* AppConstant.m in Sources */,
 				52A721481CF125EF00D503A5 /* AuthViewController.m in Sources */,
-				527752EA1D02CED20091EFAB /* ExchangeList+CoreDataProperties.m in Sources */,
-				527752EC1D02CED20091EFAB /* ExchangeDate+CoreDataProperties.m in Sources */,
-				527752EB1D02CED20091EFAB /* ExchangeList.m in Sources */,
 				52C559271CE5D7F800FCAA1A /* FormController.m in Sources */,
 				52A7214E1CF12A9900D503A5 /* AppState.m in Sources */,
-				527752ED1D02CED20091EFAB /* ExchangeDate.m in Sources */,
 				52A721571CF2D0D900D503A5 /* ExchangeViewController.m in Sources */,
+				5227C8AB1D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
