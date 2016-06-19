@@ -5,12 +5,11 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="ExchangeList" representedClassName="ExchangeList" syncable="YES">
-        <attribute name="aud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="brl" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="rates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExchangeDate" syncable="YES"/>
+        <relationship name="rates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExchangeDate" syncable="YES"/>
     </entity>
     <elements>
         <element name="ExchangeDate" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="ExchangeList" positionX="232" positionY="9" width="128" height="90"/>
+        <element name="ExchangeList" positionX="162" positionY="-30" width="128" height="75"/>
     </elements>
 </model>

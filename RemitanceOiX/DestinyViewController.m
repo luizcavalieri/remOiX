@@ -11,6 +11,7 @@
 
 @import FirebaseAuth;
 @import FirebaseDatabase;
+@import FirebaseStorage;
 
 @interface DestinyViewController ()
 
@@ -192,54 +193,6 @@
     [super touchesBegan:touches withEvent:event];
 }
 
-
-//-(void)addTextField{
-//    // This allocates a label
-//    UILabel *prefixLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-//    //This sets the label text
-//    prefixLabel.text =@"## ";
-//    // This sets the font for the label
-//    [prefixLabel setFont:[UIFont boldSystemFontOfSize:14]];
-//    // This fits the frame to size of the text
-//    [prefixLabel sizeToFit];
-//    
-//    // This allocates the textfield and sets its frame
-//    UITextField *tbxNameCustom = [[UITextField  alloc] initWithFrame:
-//                              CGRectMake(10, 150, 280, 30)];
-//    
-//    // This sets the border style of the text field
-//    tbxNameCustom.borderStyle = UITextBorderStyleRoundedRect;
-//    tbxNameCustom.contentVerticalAlignment =
-//    UIControlContentVerticalAlignmentCenter;
-//    [tbxNameCustom setFont:[UIFont boldSystemFontOfSize:12]];
-//    
-//    //Placeholder text is displayed when no text is typed
-//    tbxNameCustom.placeholder = @"Simple Text field";
-//    
-//    //Prefix label is set as left view and the text starts after that
-//    tbxNameCustom.leftView = prefixLabel;
-//    
-//    //It set when the left prefixLabel to be displayed
-//    tbxNameCustom.leftViewMode = UITextFieldViewModeAlways;
-//    
-//    // Adds the textField to the view.
-//    [self.view addSubview:tbxNameCustom];
-//    
-//    // sets the delegate to the current class
-//    tbxNameCustom.delegate = self;
-//}
-
-
-
-// This method is called once we click inside the textField
-//-(void)textFieldDidBeginEditing:(UITextField *)textField{
-//    NSLog(@"Text field did begin editing");
-//}
-//
-//// This method is called once we complete editing
-//-(void)textFieldDidEndEditing:(UITextField *)textField{
-//    NSLog(@"Text field ended editing");
-//}
 
 
 @end

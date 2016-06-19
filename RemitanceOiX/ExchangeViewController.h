@@ -11,6 +11,11 @@
 #import <RestKit/CoreData.h>
 #import "Exchange.h"
 #import "Client.h"
+#import "AppState.h"
+#import "ExchangeViewController.h"
+#import "ConfirmationViewController.h"
+#import "AppConstant.h"
+#import "Receiver.h"
 #import "ExchangeList.h"
 #import "ExchangeDate.h"
 
@@ -20,6 +25,8 @@
 
 @property (strong, nonatomic) Client *currentClient;
 @property (strong, nonatomic) Exchange *currentExchange;
+@property (strong, nonatomic) Receiver *currentReceiver;
+
 
 @property (nonatomic)  NSString *userName;
 @property (nonatomic) NSString *userEmail;

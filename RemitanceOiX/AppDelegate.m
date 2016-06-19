@@ -28,9 +28,22 @@
     
     [FIRApp configure];
     
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
-    NSURL *baseURL = [NSURL URLWithString:@"http://api.fixer.io/"];
+    NSString * today = [dateFormatter stringFromDate:[NSDate date]];
+    
+    NSLog(@"Today: %@", today);
+    
+    //NSString * stringUrl = [NSString stringWithFormat:@"http://api.fixer.io/%@?base=AUD&symbols=BRL", today];
+    
+    //NSURL *baseURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fixer.io/%@?base=AUD&symbols=BRL", today]];
+    NSURL *baseURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fixer.io/%@?base=AUD&symbols=BRL", today]];
+    
+    NSLog(@"URL: %@", baseURL);
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    
+    
     
     // Initialize managed object model from bundle
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
@@ -57,7 +70,7 @@
     exchangeListMapping.identificationAttributes = @[ @"brl" ];
     
     
-    [exchangeListMapping addAttributeMappingsFromDictionary:@{ @"aud" : @"aud" , @"brl" : @"brl"}];
+    [exchangeListMapping addAttributeMappingsFromDictionary:@{@"BRL" : @"brl"}];
     
     RKEntityMapping *exchangeDateMapping = [RKEntityMapping mappingForEntityForName:@"ExchangeDate" inManagedObjectStore:managedObjectStore];
     exchangeDateMapping.identificationAttributes = @[@"date"];
@@ -68,8 +81,8 @@
     RKResponseDescriptor *exchangeListResponseDescriptor =
     [RKResponseDescriptor responseDescriptorWithMapping:exchangeListMapping
                                                  method:RKRequestMethodGET
-                                            pathPattern:@""
-                                                keyPath:nil
+                                            pathPattern:nil
+                                                keyPath:@"rates"
                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
      ];
     

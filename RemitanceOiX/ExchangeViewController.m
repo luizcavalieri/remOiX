@@ -20,7 +20,7 @@
 
 @end
 
-#define dataRetrievalURL @"http://apilayer.net/api/live?access_key=75c3fa478f911d93a5cebf8fd64943dc&currencies=BRL,AUD&source=USD&format=1";
+#define dataRetrievalURL @"http://api.fixer.io/2016-06-07";
 
 @implementation ExchangeViewController
 
@@ -40,7 +40,6 @@
 //    currentClient.name = [[AppState sharedInstance] displayName];
 //    currentClient.email = [[AppState sharedInstance] email];
 //    
-    [lblExchangeRate setText:[NSString stringWithFormat:@"%0.2f", [currentExchange realExchange]]];
     [tbxServiceFee setText:[NSString stringWithFormat:@"%0.2f", [currentExchange serviceFee]]];
     
     tbxMoneyToReceive.enabled = false;
@@ -48,6 +47,8 @@
     tbxServiceFee.enabled = false;
     
     [self requestData];
+    
+    [self addTextField];
     
     [lblClientName setText:[NSString stringWithFormat:@"Goo'day %@", [currentClient name]]];
     
@@ -62,10 +63,10 @@
 
 - (void)requestData{
     
-    NSString * requestPath = @"latest?symbols=AUD,BRL";
+    //NSString * requestPath = @"2016-06-08?base=AUD&symbols=BRL";
     
     [[RKObjectManager sharedManager]
-     getObjectsAtPath:requestPath
+     getObjectsAtPath:@""
      parameters:nil
      success: ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          //articles have been saved in core data by now
@@ -83,7 +84,8 @@
     NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ExchangeList"];
     
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"aud" ascending:YES];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"rates" ascending:YES];
+    //NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:NO];
     fetchRequest.sortDescriptors = @[descriptor];
     
     NSError *error = nil;
@@ -93,11 +95,10 @@
     
     self.quotes = [exchangeList.rates allObjects];
     
-    //currentExchange.realExchange = [[exchangeList usdbrl] doubleValue ] / [[exchangeList usdaud]doubleValue];
+    currentExchange.realExchange = [[exchangeList brl] doubleValue];
+    [lblExchangeRate setText:[NSString stringWithFormat:@"%0.2f", [currentExchange realExchange]]];
     
-    NSLog(@"%@", [exchangeList brl]);
-    
-    //[self.tableView reloadData];
+    NSLog(@"%0.2f", [[exchangeList brl] doubleValue]);
     
 }
 
@@ -110,9 +111,9 @@
     json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
     
-    //exchange = [[NSMutableArray alloc]init];
+//  exchange = [[NSMutableArray alloc]init];
     
-    //exchange = [json objectForKey:@"quotes"];
+//  exchange = [json objectForKey:@"quotes"];
 //    
 //    for(int i = 0; i < json.count; i++){
 //        NSString * firstExchange = [[json objectAtIndex:2] objectForKey:@"USDBRL"];
@@ -148,11 +149,38 @@
 
 
 - (IBAction)btnConfirmQuotation:(id)sender {
-   
-    [self performSegueWithIdentifier:SeguesExchangeToDestiny sender:nil];
     
-    NSLog(@"this is the money: %0.2f", [[tbxMoneyToReceive text] doubleValue]);
+    [currentExchange setMoneyToSend:[[tbxMoneyToSend text] doubleValue]];
     
+    NSLog(@"%0.2f", [currentExchange moneyToSend]);
+    
+    NSNumber *myDouble = [NSNumber numberWithDouble:[currentExchange moneyToSend]];
+    
+    if([ [myDouble stringValue] length] == 0){
+        
+        [self showAlert:@"Missing Info" message:@"Please fill the amount of AUD you want to send."];
+        
+    }else{
+        
+         [self performSegueWithIdentifier:SeguesExchangeToDestiny sender:nil];
+        NSLog(@"this is the money: %0.2f", [[tbxMoneyToReceive text] doubleValue]);
+    }
+    
+    
+}
+
+-(void)showAlert:(NSString *)title message:(NSString *) message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)tbxMoneyToSendChange:(id)sender {
@@ -182,6 +210,45 @@
     [super touchesBegan:touches withEvent:event];
 }
 
+-(void)addTextField{
+    
+    [tbxServiceFee setBorderStyle: UITextBorderStyleRoundedRect];
+    UILabel *lblServiceFee = [[UILabel alloc]initWithFrame:CGRectZero];
+    lblServiceFee.text = @" Service Fee ";
+    [lblServiceFee setFont:[UIFont systemFontOfSize:14]];
+    [lblServiceFee setTextColor:[UIColor lightGrayColor]];
+    tbxServiceFee.leftView = lblServiceFee;
+    tbxServiceFee.leftViewMode = UITextFieldViewModeAlways;
+    [lblServiceFee sizeToFit];
+    
+    [tbxTotalToPay setBorderStyle: UITextBorderStyleRoundedRect];
+    UILabel *lblTotalToPay = [[UILabel alloc]initWithFrame:CGRectZero];
+    lblTotalToPay.text = @" Total AUD ";
+    [lblTotalToPay setTextColor:[UIColor lightGrayColor]];
+    [lblTotalToPay setFont:[UIFont systemFontOfSize:14]];
+    tbxTotalToPay.leftView = lblTotalToPay;
+    tbxTotalToPay.leftViewMode = UITextFieldViewModeAlways;
+    [lblTotalToPay sizeToFit];
 
+    [tbxMoneyToSend setBorderStyle: UITextBorderStyleRoundedRect];
+    UILabel *lblMoneyToSend = [[UILabel alloc]initWithFrame:CGRectZero];
+    lblMoneyToSend.text = @" AUD -> ";
+    [lblMoneyToSend setTextColor:[UIColor lightGrayColor]];
+    [lblMoneyToSend setFont:[UIFont systemFontOfSize:14]];
+    tbxMoneyToSend.leftView = lblMoneyToSend;
+    tbxMoneyToSend.leftViewMode = UITextFieldViewModeAlways;
+    [lblMoneyToSend sizeToFit];
+    
+    [tbxMoneyToReceive setBorderStyle: UITextBorderStyleRoundedRect];
+    UILabel *lblMoneyToReceive = [[UILabel alloc]initWithFrame:CGRectZero];
+    lblMoneyToReceive.text = @" BRL<- ";
+    [lblMoneyToReceive setTextColor:[UIColor lightGrayColor]];
+    [lblMoneyToReceive setFont:[UIFont systemFontOfSize:14]];
+    tbxMoneyToReceive.leftView = lblMoneyToReceive;
+    tbxMoneyToReceive.leftViewMode = UITextFieldViewModeAlways;
+    [lblMoneyToReceive sizeToFit];
+    
+    
+}
 
 @end

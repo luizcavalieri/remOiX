@@ -25,7 +25,6 @@
     self = [super init];
     if (self) {
         serviceFee = 15.00;
-        realExchange = 2.63;
     }
     return self;
 }

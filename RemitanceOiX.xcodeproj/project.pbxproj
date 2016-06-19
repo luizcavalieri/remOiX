@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4F40D1DC5324F57A1E9A58CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86349016D14A41CFE79565C0 /* libPods.a */; };
-		5227C8A91D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A21D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m */; };
-		5227C8AA1D03F34200FBAAD0 /* ExchangeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A41D03F34200FBAAD0 /* ExchangeDate.m */; };
-		5227C8AB1D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A61D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m */; };
-		5227C8AC1D03F34200FBAAD0 /* ExchangeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8A81D03F34200FBAAD0 /* ExchangeList.m */; };
+		521C9B5B1D0ACCCB00AC5DB1 /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521C9B5A1D0ACCCB00AC5DB1 /* FinalViewController.m */; };
+		521C9B5D1D0AF00E00AC5DB1 /* RemitanceOix-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 521C9B5C1D0AF00E00AC5DB1 /* RemitanceOix-Icon.png */; };
+		5227C8D91D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8D21D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.m */; };
+		5227C8DA1D07B19200FBAAD0 /* ExchangeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8D41D07B19200FBAAD0 /* ExchangeList.m */; };
+		5227C8DB1D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8D61D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.m */; };
+		5227C8DC1D07B19200FBAAD0 /* ExchangeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227C8D81D07B19200FBAAD0 /* ExchangeDate.m */; };
 		523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B34891CF4277C0072DB8D /* DestinyViewController.m */; };
-		527752E11D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */; };
 		529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB4781CFDB2A9001004C8 /* Receiver.m */; };
 		529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */; };
 		52A721431CF05A1300D503A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A721421CF05A1300D503A5 /* GoogleService-Info.plist */; };
@@ -59,17 +60,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5227C8A11D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeDate+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5227C8A21D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeDate+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5227C8A31D03F34200FBAAD0 /* ExchangeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDate.h; sourceTree = "<group>"; };
-		5227C8A41D03F34200FBAAD0 /* ExchangeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDate.m; sourceTree = "<group>"; };
-		5227C8A51D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeList+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5227C8A61D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeList+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5227C8A71D03F34200FBAAD0 /* ExchangeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeList.h; sourceTree = "<group>"; };
-		5227C8A81D03F34200FBAAD0 /* ExchangeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeList.m; sourceTree = "<group>"; };
+		521C9B591D0ACCCB00AC5DB1 /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
+		521C9B5A1D0ACCCB00AC5DB1 /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
+		521C9B5C1D0AF00E00AC5DB1 /* RemitanceOix-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemitanceOix-Icon.png"; sourceTree = "<group>"; };
+		5227C8D11D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5227C8D21D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5227C8D31D07B19200FBAAD0 /* ExchangeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeList.h; sourceTree = "<group>"; };
+		5227C8D41D07B19200FBAAD0 /* ExchangeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeList.m; sourceTree = "<group>"; };
+		5227C8D51D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExchangeDate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5227C8D61D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExchangeDate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5227C8D71D07B19200FBAAD0 /* ExchangeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeDate.h; sourceTree = "<group>"; };
+		5227C8D81D07B19200FBAAD0 /* ExchangeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeDate.m; sourceTree = "<group>"; };
 		523B34881CF4277C0072DB8D /* DestinyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinyViewController.h; sourceTree = "<group>"; };
 		523B34891CF4277C0072DB8D /* DestinyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinyViewController.m; sourceTree = "<group>"; };
-		527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelExchange.xcdatamodel; sourceTree = "<group>"; };
 		529DB4771CFDB2A9001004C8 /* Receiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
 		529DB4781CFDB2A9001004C8 /* Receiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
 		529DB47A1CFDB989001004C8 /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationViewController.h; sourceTree = "<group>"; };
@@ -166,7 +169,15 @@
 		527752DE1D02CC1D0091EFAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */,
+				52C558F51CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld */,
+				5227C8D11D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.h */,
+				5227C8D21D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.m */,
+				5227C8D31D07B19200FBAAD0 /* ExchangeList.h */,
+				5227C8D41D07B19200FBAAD0 /* ExchangeList.m */,
+				5227C8D51D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.h */,
+				5227C8D61D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.m */,
+				5227C8D71D07B19200FBAAD0 /* ExchangeDate.h */,
+				5227C8D81D07B19200FBAAD0 /* ExchangeDate.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -184,6 +195,8 @@
 				523B34891CF4277C0072DB8D /* DestinyViewController.m */,
 				529DB47A1CFDB989001004C8 /* ConfirmationViewController.h */,
 				529DB47B1CFDB989001004C8 /* ConfirmationViewController.m */,
+				521C9B591D0ACCCB00AC5DB1 /* FinalViewController.h */,
+				521C9B5A1D0ACCCB00AC5DB1 /* FinalViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -210,14 +223,6 @@
 		52C558DD1CE4924900FCAA1A = {
 			isa = PBXGroup;
 			children = (
-				5227C8A11D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.h */,
-				5227C8A21D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m */,
-				5227C8A31D03F34200FBAAD0 /* ExchangeDate.h */,
-				5227C8A41D03F34200FBAAD0 /* ExchangeDate.m */,
-				5227C8A51D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.h */,
-				5227C8A61D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m */,
-				5227C8A71D03F34200FBAAD0 /* ExchangeList.h */,
-				5227C8A81D03F34200FBAAD0 /* ExchangeList.m */,
 				52C558E81CE4924900FCAA1A /* RemitanceOiX */,
 				52C559051CE4924900FCAA1A /* RemitanceOiXTests */,
 				52C559101CE4924900FCAA1A /* RemitanceOiXUITests */,
@@ -254,7 +259,6 @@
 				52C558F81CE4924900FCAA1A /* Assets.xcassets */,
 				52C558FA1CE4924900FCAA1A /* LaunchScreen.storyboard */,
 				52C558FD1CE4924900FCAA1A /* Info.plist */,
-				52C558F51CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld */,
 				52C558E91CE4924900FCAA1A /* Supporting Files */,
 			);
 			path = RemitanceOiX;
@@ -289,6 +293,7 @@
 		52C559211CE496B700FCAA1A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				521C9B5C1D0AF00E00AC5DB1 /* RemitanceOix-Icon.png */,
 				52C559291CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png */,
 				52C559221CE4A33000FCAA1A /* RemitanceOiX-450x450.png */,
 				52C5591F1CE496A200FCAA1A /* RemitanceOiX.png */,
@@ -408,6 +413,7 @@
 				52C558F91CE4924900FCAA1A /* Assets.xcassets in Resources */,
 				52C558F41CE4924900FCAA1A /* Main.storyboard in Resources */,
 				52C5592A1CE711C800FCAA1A /* RemitanceOiX-thankyou-300x300.png in Resources */,
+				521C9B5D1D0AF00E00AC5DB1 /* RemitanceOix-Icon.png in Resources */,
 				52C559231CE4A33000FCAA1A /* RemitanceOiX-450x450.png in Resources */,
 				52C559201CE496A200FCAA1A /* RemitanceOiX.png in Resources */,
 				52C559281CE5D7F800FCAA1A /* FormController.xib in Resources */,
@@ -483,26 +489,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5227C8AA1D03F34200FBAAD0 /* ExchangeDate.m in Sources */,
 				529DB4791CFDB2A9001004C8 /* Receiver.m in Sources */,
-				5227C8A91D03F34200FBAAD0 /* ExchangeDate+CoreDataProperties.m in Sources */,
 				52A7215A1CF32FDC00D503A5 /* Exchange.m in Sources */,
+				5227C8DB1D07B19200FBAAD0 /* ExchangeDate+CoreDataProperties.m in Sources */,
+				5227C8DC1D07B19200FBAAD0 /* ExchangeDate.m in Sources */,
+				5227C8D91D07B19200FBAAD0 /* ExchangeList+CoreDataProperties.m in Sources */,
 				52C558F11CE4924900FCAA1A /* ViewController.m in Sources */,
 				52C558F71CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld in Sources */,
-				527752E11D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld in Sources */,
 				529DB47C1CFDB989001004C8 /* ConfirmationViewController.m in Sources */,
-				5227C8AC1D03F34200FBAAD0 /* ExchangeList.m in Sources */,
 				52D0FD0F1CF8501700DECDAA /* Client.m in Sources */,
 				52A7214B1CF129A900D503A5 /* MeasurementHelper.m in Sources */,
+				5227C8DA1D07B19200FBAAD0 /* ExchangeList.m in Sources */,
 				52C558EE1CE4924900FCAA1A /* AppDelegate.m in Sources */,
 				523B348A1CF4277C0072DB8D /* DestinyViewController.m in Sources */,
+				521C9B5B1D0ACCCB00AC5DB1 /* FinalViewController.m in Sources */,
 				52C558EB1CE4924900FCAA1A /* main.m in Sources */,
 				52A721511CF12AF600D503A5 /* AppConstant.m in Sources */,
 				52A721481CF125EF00D503A5 /* AuthViewController.m in Sources */,
 				52C559271CE5D7F800FCAA1A /* FormController.m in Sources */,
 				52A7214E1CF12A9900D503A5 /* AppState.m in Sources */,
 				52A721571CF2D0D900D503A5 /* ExchangeViewController.m in Sources */,
-				5227C8AB1D03F34200FBAAD0 /* ExchangeList+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,16 +821,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		527752DF1D02CC4F0091EFAB /* DataModelExchange.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */,
-			);
-			currentVersion = 527752E01D02CC4F0091EFAB /* DataModelExchange.xcdatamodel */;
-			path = DataModelExchange.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		52C558F51CE4924900FCAA1A /* RemitanceOiX.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
